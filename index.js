@@ -1557,7 +1557,7 @@ module.exports = new Map([
 			],
 			[
 				'CCC133',
-				'CCC133 # RESERVED'
+				'CCC133'
 			],
 			[
 				'ATBL',
@@ -2355,7 +2355,7 @@ module.exports = new Map([
 		new Map([
 			[
 				'C',
-				'Other                            # Cc | Cf | Cn | Co | Cs'
+				'Other'
 			],
 			[
 				'Cc',
@@ -2383,11 +2383,11 @@ module.exports = new Map([
 			],
 			[
 				'L',
-				'Letter                           # Ll | Lm | Lo | Lt | Lu'
+				'Letter'
 			],
 			[
 				'LC',
-				'Cased_Letter                     # Ll | Lt | Lu'
+				'Cased_Letter'
 			],
 			[
 				'Ll',
@@ -2431,7 +2431,7 @@ module.exports = new Map([
 			],
 			[
 				'N',
-				'Number                           # Nd | Nl | No'
+				'Number'
 			],
 			[
 				'Nd',
@@ -2487,7 +2487,7 @@ module.exports = new Map([
 			],
 			[
 				'S',
-				'Symbol                           # Sc | Sk | Sm | So'
+				'Symbol'
 			],
 			[
 				'Sc',
@@ -2507,7 +2507,7 @@ module.exports = new Map([
 			],
 			[
 				'Z',
-				'Separator                        # Zl | Zp | Zs'
+				'Separator'
 			],
 			[
 				'Zl',

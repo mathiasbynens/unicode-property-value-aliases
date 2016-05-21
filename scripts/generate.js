@@ -32,7 +32,7 @@ const parsePropertyValueAliases = function() {
 		}
 		const map = propertyValueAliasesPerProperty.get(property);
 		const alias1 = data[1].trim();
-		const canonicalName = data[2].trim();
+		const canonicalName = data[2].split('#')[0].trim();
 		console.assert(!map.has(alias1));
 		map.set(alias1, canonicalName);
 		const remaining = data.slice(3);
