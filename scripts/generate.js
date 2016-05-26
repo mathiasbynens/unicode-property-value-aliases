@@ -18,7 +18,7 @@ const parsePropertyValueAliases = function() {
 		if (!line || /^#/.test(line)) {
 			return;
 		}
-		const data = line.trim().split(';');
+		const data = line.split('#')[0].split(';');
 		const propertyAlias = data[0].trim();
 		const property = propertyAliases.get(propertyAlias);
 		if (!propertyValueAliasesPerProperty.has(property)) {

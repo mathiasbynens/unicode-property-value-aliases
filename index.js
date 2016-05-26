@@ -2414,7 +2414,7 @@ module.exports = new Map([
 				'Mark'
 			],
 			[
-				'Combining_Mark                   # Mc | Me | Mn',
+				'Combining_Mark',
 				'Mark'
 			],
 			[
@@ -2454,7 +2454,7 @@ module.exports = new Map([
 				'Punctuation'
 			],
 			[
-				'punct                            # Pc | Pd | Pe | Pf | Pi | Po | Ps',
+				'punct',
 				'Punctuation'
 			],
 			[
