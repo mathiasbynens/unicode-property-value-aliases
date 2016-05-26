@@ -30,4 +30,20 @@ test(t => {
 		propertyValueAliases.get('Canonical_Combining_Class').get('KV'),
 		'Kana_Voicing'
 	);
+	t.is(
+		propertyValueAliases.get('General_Category').get('L'),
+		'Letter'
+	);
+	t.is(
+		propertyValueAliases.get('General_Category').get('Lu'),
+		'Uppercase_Letter'
+	);
+	t.is(
+		propertyValueAliases.get('General_Category').get('C'),
+		'Other'
+	);
+	t.is(
+		propertyValueAliases.get('General_Category').get('Cn'),
+		'Unassigned'
+	);
 });

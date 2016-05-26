@@ -4,12 +4,6 @@ const fs = require('fs');
 const jsesc = require('jsesc');
 const propertyAliases = require('unicode-property-aliases');
 
-// NOTE: Property value names are NOT unique across properties. For example:
-//
-//   AL means Arabic Letter for the Bidi_Class property, and
-//   AL means Above_Left for the Canonical_Combining_Class property, and
-//   AL means Alphabetic for the Line_Break property.
-
 const parsePropertyValueAliases = function() {
 	const propertyValueAliasesPerProperty = new Map();
 	const source = fs.readFileSync('./data/PropertyValueAliases.txt', 'utf8');
