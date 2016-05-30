@@ -31,11 +31,11 @@
   "devDependencies": {
     "ava": "*",
     "jsesc": "^2.0.0",
-    "unicode-property-aliases": "^1.0.0"
+    "unicode-property-aliases": "^1.0.1"
   },
   "scripts": {
     "download": "curl http://unicode.org/Public/8.0.0/ucd/PropertyValueAliases.txt > data/PropertyValueAliases.txt",
-    "build": "node scripts/generate.js",
+    "build": "node scripts/build.js",
     "test": "ava ./tests"
   }
 }
