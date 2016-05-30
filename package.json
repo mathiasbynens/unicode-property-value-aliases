@@ -30,7 +30,7 @@
   "bugs": "https://github.com/mathiasbynens/unicode-property-value-aliases/issues",
   "devDependencies": {
     "ava": "*",
-    "jsesc": "^1.2.0",
+    "jsesc": "^2.0.0",
     "unicode-property-aliases": "^1.0.0"
   },
   "scripts": {
