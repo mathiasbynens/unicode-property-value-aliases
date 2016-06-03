@@ -26,6 +26,7 @@ module.exports = new Map([
 		['6.3', 'V6_3'],
 		['7.0', 'V7_0'],
 		['8.0', 'V8_0'],
+		['9.0', 'V9_0'],
 		['NA', 'Unassigned']
 	])],
 	['Alphabetic', new Map([
@@ -83,6 +84,7 @@ module.exports = new Map([
 		['o', 'Open']
 	])],
 	['Block', new Map([
+		['Adlam', 'Adlam'],
 		['Aegean_Numbers', 'Aegean_Numbers'],
 		['Ahom', 'Ahom'],
 		['Alchemical', 'Alchemical_Symbols'],
@@ -108,6 +110,7 @@ module.exports = new Map([
 		['Bassa_Vah', 'Bassa_Vah'],
 		['Batak', 'Batak'],
 		['Bengali', 'Bengali'],
+		['Bhaiksuki', 'Bhaiksuki'],
 		['Block_Elements', 'Block_Elements'],
 		['Bopomofo', 'Bopomofo'],
 		['Bopomofo_Ext', 'Bopomofo_Extended'],
@@ -148,6 +151,7 @@ module.exports = new Map([
 		['Cyrillic', 'Cyrillic'],
 		['Cyrillic_Ext_A', 'Cyrillic_Extended_A'],
 		['Cyrillic_Ext_B', 'Cyrillic_Extended_B'],
+		['Cyrillic_Ext_C', 'Cyrillic_Extended_C'],
 		['Cyrillic_Sup', 'Cyrillic_Supplement'],
 		['Cyrillic_Supplementary', 'Cyrillic_Supplement'],
 		['Deseret', 'Deseret'],
@@ -178,6 +182,7 @@ module.exports = new Map([
 		['Georgian', 'Georgian'],
 		['Georgian_Sup', 'Georgian_Supplement'],
 		['Glagolitic', 'Glagolitic'],
+		['Glagolitic_Sup', 'Glagolitic_Supplement'],
 		['Gothic', 'Gothic'],
 		['Grantha', 'Grantha'],
 		['Greek', 'Greek_And_Coptic'],
@@ -194,6 +199,7 @@ module.exports = new Map([
 		['High_Surrogates', 'High_Surrogates'],
 		['Hiragana', 'Hiragana'],
 		['IDC', 'Ideographic_Description_Characters'],
+		['Ideographic_Symbols', 'Ideographic_Symbols_And_Punctuation'],
 		['Imperial_Aramaic', 'Imperial_Aramaic'],
 		['Indic_Number_Forms', 'Common_Indic_Number_Forms'],
 		['Inscriptional_Pahlavi', 'Inscriptional_Pahlavi'],
@@ -240,6 +246,7 @@ module.exports = new Map([
 		['Malayalam', 'Malayalam'],
 		['Mandaic', 'Mandaic'],
 		['Manichaean', 'Manichaean'],
+		['Marchen', 'Marchen'],
 		['Math_Alphanum', 'Mathematical_Alphanumeric_Symbols'],
 		['Math_Operators', 'Mathematical_Operators'],
 		['Meetei_Mayek', 'Meetei_Mayek'],
@@ -258,6 +265,7 @@ module.exports = new Map([
 		['Modifier_Letters', 'Spacing_Modifier_Letters'],
 		['Modifier_Tone_Letters', 'Modifier_Tone_Letters'],
 		['Mongolian', 'Mongolian'],
+		['Mongolian_Sup', 'Mongolian_Supplement'],
 		['Mro', 'Mro'],
 		['Multani', 'Multani'],
 		['Music', 'Musical_Symbols'],
@@ -267,6 +275,7 @@ module.exports = new Map([
 		['Nabataean', 'Nabataean'],
 		['NB', 'No_Block'],
 		['New_Tai_Lue', 'New_Tai_Lue'],
+		['Newa', 'Newa'],
 		['NKo', 'NKo'],
 		['Number_Forms', 'Number_Forms'],
 		['OCR', 'Optical_Character_Recognition'],
@@ -281,6 +290,7 @@ module.exports = new Map([
 		['Old_Turkic', 'Old_Turkic'],
 		['Oriya', 'Oriya'],
 		['Ornamental_Dingbats', 'Ornamental_Dingbats'],
+		['Osage', 'Osage'],
 		['Osmanya', 'Osmanya'],
 		['Pahawh_Hmong', 'Pahawh_Hmong'],
 		['Palmyrene', 'Palmyrene'],
@@ -332,6 +342,8 @@ module.exports = new Map([
 		['Tai_Xuan_Jing', 'Tai_Xuan_Jing_Symbols'],
 		['Takri', 'Takri'],
 		['Tamil', 'Tamil'],
+		['Tangut', 'Tangut'],
+		['Tangut_Components', 'Tangut_Components'],
 		['Telugu', 'Telugu'],
 		['Thaana', 'Thaana'],
 		['Thai', 'Thai'],
@@ -665,7 +677,11 @@ module.exports = new Map([
 	['Grapheme_Cluster_Break', new Map([
 		['CN', 'Control'],
 		['CR', 'CR'],
+		['EB', 'E_Base'],
+		['EBG', 'E_Base_GAZ'],
+		['EM', 'E_Modifier'],
 		['EX', 'Extend'],
+		['GAZ', 'Glue_After_Zwj'],
 		['L', 'L'],
 		['LF', 'LF'],
 		['LV', 'LV'],
@@ -675,7 +691,8 @@ module.exports = new Map([
 		['SM', 'SpacingMark'],
 		['T', 'T'],
 		['V', 'V'],
-		['XX', 'Other']
+		['XX', 'Other'],
+		['ZWJ', 'ZWJ']
 	])],
 	['Grapheme_Extend', new Map([
 		['N', 'No'],
@@ -873,6 +890,9 @@ module.exports = new Map([
 		['True', 'Yes']
 	])],
 	['Joining_Group', new Map([
+		['African_Feh', 'African_Feh'],
+		['African_Noon', 'African_Noon'],
+		['African_Qaf', 'African_Qaf'],
 		['Ain', 'Ain'],
 		['Alaph', 'Alaph'],
 		['Alef', 'Alef'],
@@ -981,6 +1001,8 @@ module.exports = new Map([
 		['CM', 'Combining_Mark'],
 		['CP', 'Close_Parenthesis'],
 		['CR', 'Carriage_Return'],
+		['EB', 'E_Base'],
+		['EM', 'E_Modifier'],
 		['EX', 'Exclamation'],
 		['GL', 'Glue'],
 		['H2', 'H2'],
@@ -1009,7 +1031,8 @@ module.exports = new Map([
 		['SY', 'Break_Symbols'],
 		['WJ', 'Word_Joiner'],
 		['XX', 'Unknown'],
-		['ZW', 'ZWSpace']
+		['ZW', 'ZWSpace'],
+		['ZWJ', 'ZWJ']
 	])],
 	['Logical_Order_Exception', new Map([
 		['N', 'No'],
@@ -1147,6 +1170,14 @@ module.exports = new Map([
 		['T', 'Yes'],
 		['True', 'Yes']
 	])],
+	['Prepended_Concatenation_Mark', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
+	])],
 	['Quotation_Mark', new Map([
 		['N', 'No'],
 		['F', 'No'],
@@ -1163,15 +1194,8 @@ module.exports = new Map([
 		['T', 'Yes'],
 		['True', 'Yes']
 	])],
-	['STerm', new Map([
-		['N', 'No'],
-		['F', 'No'],
-		['False', 'No'],
-		['Y', 'Yes'],
-		['T', 'Yes'],
-		['True', 'Yes']
-	])],
 	['Script', new Map([
+		['Adlm', 'Adlam'],
 		['Aghb', 'Caucasian_Albanian'],
 		['Ahom', 'Ahom'],
 		['Arab', 'Arabic'],
@@ -1183,6 +1207,7 @@ module.exports = new Map([
 		['Bass', 'Bassa_Vah'],
 		['Batk', 'Batak'],
 		['Beng', 'Bengali'],
+		['Bhks', 'Bhaiksuki'],
 		['Bopo', 'Bopomofo'],
 		['Brah', 'Brahmi'],
 		['Brai', 'Braille'],
@@ -1242,6 +1267,7 @@ module.exports = new Map([
 		['Mahj', 'Mahajani'],
 		['Mand', 'Mandaic'],
 		['Mani', 'Manichaean'],
+		['Marc', 'Marchen'],
 		['Mend', 'Mende_Kikakui'],
 		['Merc', 'Meroitic_Cursive'],
 		['Mero', 'Meroitic_Hieroglyphs'],
@@ -1254,11 +1280,13 @@ module.exports = new Map([
 		['Mymr', 'Myanmar'],
 		['Narb', 'Old_North_Arabian'],
 		['Nbat', 'Nabataean'],
+		['Newa', 'Newa'],
 		['Nkoo', 'Nko'],
 		['Ogam', 'Ogham'],
 		['Olck', 'Ol_Chiki'],
 		['Orkh', 'Old_Turkic'],
 		['Orya', 'Oriya'],
+		['Osge', 'Osage'],
 		['Osma', 'Osmanya'],
 		['Palm', 'Palmyrene'],
 		['Pauc', 'Pau_Cin_Hau'],
@@ -1289,6 +1317,7 @@ module.exports = new Map([
 		['Tale', 'Tai_Le'],
 		['Talu', 'New_Tai_Lue'],
 		['Taml', 'Tamil'],
+		['Tang', 'Tangut'],
 		['Tavt', 'Tai_Viet'],
 		['Telu', 'Telugu'],
 		['Tfng', 'Tifinagh'],
@@ -1324,6 +1353,14 @@ module.exports = new Map([
 		['ST', 'STerm'],
 		['UP', 'Upper'],
 		['XX', 'Other']
+	])],
+	['Sentence_Terminal', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
 	])],
 	['Soft_Dotted', new Map([
 		['N', 'No'],
@@ -1376,9 +1413,13 @@ module.exports = new Map([
 	['Word_Break', new Map([
 		['CR', 'CR'],
 		['DQ', 'Double_Quote'],
+		['EB', 'E_Base'],
+		['EBG', 'E_Base_GAZ'],
+		['EM', 'E_Modifier'],
 		['EX', 'ExtendNumLet'],
 		['Extend', 'Extend'],
 		['FO', 'Format'],
+		['GAZ', 'Glue_After_Zwj'],
 		['HL', 'Hebrew_Letter'],
 		['KA', 'Katakana'],
 		['LE', 'ALetter'],
@@ -1390,7 +1431,8 @@ module.exports = new Map([
 		['NU', 'Numeric'],
 		['RI', 'Regional_Indicator'],
 		['SQ', 'Single_Quote'],
-		['XX', 'Other']
+		['XX', 'Other'],
+		['ZWJ', 'ZWJ']
 	])],
 	['XID_Continue', new Map([
 		['N', 'No'],
