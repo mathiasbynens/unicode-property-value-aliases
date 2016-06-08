@@ -1,5 +1,29 @@
 // Generated using `npm run build`. Do not edit!
 module.exports = new Map([
+	['ASCII', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
+	])],
+	['Any', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
+	])],
+	['Assigned', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
+	])],
 	['ASCII_Hex_Digit', new Map([
 		['N', 'No'],
 		['F', 'No'],

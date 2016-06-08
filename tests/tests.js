@@ -3,6 +3,18 @@ import propertyValueAliases from '../index.js';
 
 test(t => {
 	t.is(
+		propertyValueAliases.get('ASCII').get('N'),
+		'No'
+	);
+	t.is(
+		propertyValueAliases.get('Any').get('N'),
+		'No'
+	);
+	t.is(
+		propertyValueAliases.get('Assigned').get('N'),
+		'No'
+	);
+	t.is(
 		propertyValueAliases.get('ASCII_Hex_Digit').get('N'),
 		'No'
 	);

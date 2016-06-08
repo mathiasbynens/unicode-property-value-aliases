@@ -40,9 +40,24 @@ const parsePropertyValueAliases = function() {
 };
 
 const mappings = parsePropertyValueAliases();
+
+const binaryPropertyValueAliases = mappings.get('ASCII_Hex_Digit');
+// `ASCII`, `Any`, and `Assigned` are the only binary properties that are not
+// mentioned in `PropertyValueAliases.txt`. ಠ_ಠ
+const additionalMappings = new Map([
+	['ASCII', binaryPropertyValueAliases],
+	['Any', binaryPropertyValueAliases],
+	['Assigned', binaryPropertyValueAliases]
+]);
+
+const allMappings = new Map([
+	...additionalMappings,
+	...mappings
+])
+
 const header = '// Generated using `npm run build`. Do not edit!';
 const output = `${ header }\nmodule.exports = ${
-	jsesc(mappings, {
+	jsesc(allMappings, {
 		'compact': false
 	})
 };\n`;
