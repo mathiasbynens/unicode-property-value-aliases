@@ -42,6 +42,11 @@ const parsePropertyValueAliases = function() {
 const mappings = parsePropertyValueAliases();
 
 const binaryPropertyValueAliases = mappings.get('ASCII_Hex_Digit');
+
+// Re-use the `Script` mappings for `Script_Extensions`.
+const scriptMappings = mappings.get('Script');
+mappings.set('Script_Extensions', scriptMappings);
+
 // `ASCII`, `Any`, and `Assigned` are the only binary properties that are not
 // mentioned in `PropertyValueAliases.txt`. ಠ_ಠ
 const additionalMappings = new Map([
@@ -53,7 +58,7 @@ const additionalMappings = new Map([
 const allMappings = new Map([
 	...additionalMappings,
 	...mappings
-])
+]);
 
 const header = '// Generated using `npm run build`. Do not edit!';
 const output = `${ header }\nmodule.exports = ${

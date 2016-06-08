@@ -58,4 +58,12 @@ test(t => {
 		propertyValueAliases.get('General_Category').get('Cn'),
 		'Unassigned'
 	);
+	t.is(
+		propertyValueAliases.get('Script').get('Aghb'),
+		'Caucasian_Albanian'
+	);
+	t.is(
+		propertyValueAliases.get('Script_Extensions').get('Aghb'),
+		'Caucasian_Albanian'
+	);
 });
