@@ -5,7 +5,7 @@
   "homepage": "https://github.com/mathiasbynens/unicode-property-value-aliases",
   "main": "index.js",
   "engines": {
-    "node": ">=6"
+    "node": ">=4"
   },
   "files": [
     "LICENSE-MIT.txt",
