@@ -30,8 +30,8 @@
   "bugs": "https://github.com/mathiasbynens/unicode-property-value-aliases/issues",
   "devDependencies": {
     "ava": "*",
-    "jsesc": "^2.2.0",
-    "unicode-property-aliases": "^1.1.0"
+    "jsesc": "^2.5.0",
+    "unicode-property-aliases-ecmascript": "^1.0.0"
   },
   "scripts": {
     "download": "curl http://unicode.org/Public/9.0.0/ucd/PropertyValueAliases.txt > data/PropertyValueAliases.txt",

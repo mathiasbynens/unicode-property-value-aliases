@@ -2,18 +2,21 @@
 
 const fs = require('fs');
 const jsesc = require('jsesc');
-const propertyAliases = require('unicode-property-aliases');
+const propertyAliases = require('unicode-property-aliases-ecmascript');
 
 const parsePropertyValueAliases = function() {
 	const propertyValueAliasesPerProperty = new Map();
 	const source = fs.readFileSync('./data/PropertyValueAliases.txt', 'utf8');
 	const lines = source.split('\n');
-	lines.forEach(function(line) {
+	for (const line of lines) {
 		if (!line || /^#/.test(line)) {
-			return;
+			continue;
 		}
 		const data = line.split('#')[0].split(';');
 		const propertyAlias = data[0].trim();
+		if (!propertyAliases.has(propertyAlias)) {
+			continue;
+		}
 		const property = propertyAliases.get(propertyAlias);
 		if (!propertyValueAliasesPerProperty.has(property)) {
 			propertyValueAliasesPerProperty.set(property, new Map());
@@ -35,34 +38,30 @@ const parsePropertyValueAliases = function() {
 			console.assert(!map.has(otherAlias));
 			map.set(otherAlias, canonicalName);
 		}
-	});
+	}
 	return propertyValueAliasesPerProperty;
 };
 
 const mappings = parsePropertyValueAliases();
 
-const binaryPropertyValueAliases = mappings.get('ASCII_Hex_Digit');
+// Delete binary properties.
+for (const [property, values] of mappings) {
+	if (
+		values.size == 6 &&
+		values.get('False') == 'No' &&
+		values.get('True') == 'Yes'
+	) {
+		mappings.delete(property);
+	}
+}
 
 // Re-use the `Script` mappings for `Script_Extensions`.
 const scriptMappings = mappings.get('Script');
 mappings.set('Script_Extensions', scriptMappings);
 
-// `ASCII`, `Any`, and `Assigned` are the only binary properties that are not
-// mentioned in `PropertyValueAliases.txt`. ಠ_ಠ
-const additionalMappings = new Map([
-	['ASCII', binaryPropertyValueAliases],
-	['Any', binaryPropertyValueAliases],
-	['Assigned', binaryPropertyValueAliases]
-]);
-
-const allMappings = new Map([
-	...additionalMappings,
-	...mappings
-]);
-
 const header = '// Generated using `npm run build`. Do not edit!';
 const output = `${ header }\nmodule.exports = ${
-	jsesc(allMappings, {
+	jsesc(mappings, {
 		'compact': false
 	})
 };\n`;

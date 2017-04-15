@@ -1,6 +1,8 @@
 # unicode-property-value-aliases [![Build status](https://travis-ci.org/mathiasbynens/unicode-property-value-aliases.svg?branch=master)](https://travis-ci.org/mathiasbynens/unicode-property-value-aliases)
 
-_unicode-property-value-aliases_ offers the Unicode property value alias mappings in an easy-to-consume JavaScript format.
+_unicode-property-value-aliases_ offers Unicode property value alias mappings in an easy-to-consume JavaScript format.
+
+It only contains the Unicode property names and values that are supported in [ECMAScript RegExp property escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes).
 
 It’s based on [the `PropertyValueAliases.txt` data for Unicode v9.0.0](http://unicode.org/Public/9.0.0/ucd/PropertyValueAliases.txt).
 
