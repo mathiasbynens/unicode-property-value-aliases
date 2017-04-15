@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const jsesc = require('jsesc');
-const propertyAliases = require('unicode-property-aliases-ecmascript');
+const propertyAliases = require('unicode-property-aliases');
 
 const parsePropertyValueAliases = function() {
 	const propertyValueAliasesPerProperty = new Map();
@@ -14,9 +14,6 @@ const parsePropertyValueAliases = function() {
 		}
 		const data = line.split('#')[0].split(';');
 		const propertyAlias = data[0].trim();
-		if (!propertyAliases.has(propertyAlias)) {
-			continue;
-		}
 		const property = propertyAliases.get(propertyAlias);
 		if (!propertyValueAliasesPerProperty.has(property)) {
 			propertyValueAliasesPerProperty.set(property, new Map());
@@ -44,24 +41,28 @@ const parsePropertyValueAliases = function() {
 
 const mappings = parsePropertyValueAliases();
 
-// Delete binary properties.
-for (const [property, values] of mappings) {
-	if (
-		values.size == 6 &&
-		values.get('False') == 'No' &&
-		values.get('True') == 'Yes'
-	) {
-		mappings.delete(property);
-	}
-}
+const binaryPropertyValueAliases = mappings.get('ASCII_Hex_Digit');
 
 // Re-use the `Script` mappings for `Script_Extensions`.
 const scriptMappings = mappings.get('Script');
 mappings.set('Script_Extensions', scriptMappings);
 
+// `ASCII`, `Any`, and `Assigned` are the only binary properties that are not
+// mentioned in `PropertyValueAliases.txt`. ಠ_ಠ
+const additionalMappings = new Map([
+	['ASCII', binaryPropertyValueAliases],
+	['Any', binaryPropertyValueAliases],
+	['Assigned', binaryPropertyValueAliases]
+]);
+
+const allMappings = new Map([
+	...additionalMappings,
+	...mappings
+]);
+
 const header = '// Generated using `npm run build`. Do not edit!';
 const output = `${ header }\nmodule.exports = ${
-	jsesc(mappings, {
+	jsesc(allMappings, {
 		'compact': false
 	})
 };\n`;
