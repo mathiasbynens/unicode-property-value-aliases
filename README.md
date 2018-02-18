@@ -2,7 +2,7 @@
 
 _unicode-property-value-aliases_ offers the Unicode property value alias mappings in an easy-to-consume JavaScript format.
 
-It’s based on [the `PropertyValueAliases.txt` data for Unicode v9.0.0](http://unicode.org/Public/9.0.0/ucd/PropertyValueAliases.txt).
+It’s based on [the `PropertyValueAliases.txt` data for Unicode v10.0.0](http://unicode.org/Public/10.0.0/ucd/PropertyValueAliases.txt).
 
 For the subset used by Unicode RegExp property escapes in ECMAScript, [see _unicode-property-value-aliases-ecmascript_](https://github.com/mathiasbynens/unicode-property-value-aliases-ecmascript).
 
