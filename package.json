@@ -1,6 +1,6 @@
 {
   "name": "unicode-property-value-aliases",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Unicode property value alias mappings in JavaScript format.",
   "homepage": "https://github.com/mathiasbynens/unicode-property-value-aliases",
   "main": "index.js",
