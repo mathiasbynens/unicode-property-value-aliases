@@ -34,7 +34,7 @@
     "unicode-property-aliases": "^1.2.0"
   },
   "scripts": {
-    "download": "curl https://unicode.org/Public/11.0.0/ucd/PropertyValueAliases-11.0.0d16.txt > data/PropertyValueAliases.txt",
+    "download": "curl https://unicode.org/Public/11.0.0/ucd/PropertyValueAliases.txt > data/PropertyValueAliases.txt",
     "build": "node scripts/build.js",
     "test": "ava ./tests"
   }

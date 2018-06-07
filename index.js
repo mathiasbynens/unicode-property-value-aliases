@@ -728,7 +728,6 @@ module.exports = new Map([
 		['GAZ', 'Glue_After_Zwj'],
 		['L', 'L'],
 		['LF', 'LF'],
-		['LinkC', 'LinkingConsonant'],
 		['LV', 'LV'],
 		['LVT', 'LVT'],
 		['PP', 'Prepend'],
@@ -736,7 +735,6 @@ module.exports = new Map([
 		['SM', 'SpacingMark'],
 		['T', 'T'],
 		['V', 'V'],
-		['Virama', 'Virama'],
 		['XX', 'Other'],
 		['ZWJ', 'ZWJ']
 	])],
