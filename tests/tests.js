@@ -1,5 +1,5 @@
-import test from 'ava';
-import propertyValueAliases from '../index.js';
+const test = require('ava');
+const propertyValueAliases = require('../index.js');
 
 test('unicode-property-value-aliases', t => {
 	t.is(
@@ -65,5 +65,9 @@ test('unicode-property-value-aliases', t => {
 	t.is(
 		propertyValueAliases.get('Script_Extensions').get('Aghb'),
 		'Caucasian_Albanian'
+	);
+	t.is(
+		propertyValueAliases.get('Script').get('Kits'),
+		'Khitan_Small_Script'
 	);
 });
