@@ -1,4 +1,4 @@
-# unicode-property-value-aliases [![Build status](https://travis-ci.org/mathiasbynens/unicode-property-value-aliases.svg?branch=master)](https://travis-ci.org/mathiasbynens/unicode-property-value-aliases)
+# unicode-property-value-aliases [![unicode-property-value-aliases on npm](https://img.shields.io/npm/v/unicode-property-value-aliases)](https://www.npmjs.com/package/unicode-property-value-aliases)
 
 _unicode-property-value-aliases_ offers the Unicode property value alias mappings in an easy-to-consume JavaScript format.
 
