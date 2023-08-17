@@ -58,6 +58,7 @@ module.exports = new Map([
 		['13.0', 'V13_0'],
 		['14.0', 'V14_0'],
 		['15.0', 'V15_0'],
+		['15.1', 'V15_1'],
 		['NA', 'Unassigned']
 	])],
 	['Alphabetic', new Map([
@@ -174,6 +175,7 @@ module.exports = new Map([
 		['CJK_Ext_F', 'CJK_Unified_Ideographs_Extension_F'],
 		['CJK_Ext_G', 'CJK_Unified_Ideographs_Extension_G'],
 		['CJK_Ext_H', 'CJK_Unified_Ideographs_Extension_H'],
+		['CJK_Ext_I', 'CJK_Unified_Ideographs_Extension_I'],
 		['CJK_Radicals_Sup', 'CJK_Radicals_Supplement'],
 		['CJK_Strokes', 'CJK_Strokes'],
 		['CJK_Symbols', 'CJK_Symbols_And_Punctuation'],
@@ -884,6 +886,30 @@ module.exports = new Map([
 		['T', 'Yes'],
 		['True', 'Yes']
 	])],
+	['IDS_Unary_Operator', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
+	])],
+	['ID_Compat_Math_Continue', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
+	])],
+	['ID_Compat_Math_Start', new Map([
+		['N', 'No'],
+		['F', 'No'],
+		['False', 'No'],
+		['Y', 'Yes'],
+		['T', 'Yes'],
+		['True', 'Yes']
+	])],
 	['ID_Continue', new Map([
 		['N', 'No'],
 		['F', 'No'],
@@ -907,6 +933,12 @@ module.exports = new Map([
 		['Y', 'Yes'],
 		['T', 'Yes'],
 		['True', 'Yes']
+	])],
+	['Indic_Conjunct_Break', new Map([
+		['Consonant', 'Consonant'],
+		['Extend', 'Extend'],
+		['Linker', 'Linker'],
+		['None', 'None']
 	])],
 	['Indic_Positional_Category', new Map([
 		['Bottom', 'Bottom'],
@@ -1142,7 +1174,10 @@ module.exports = new Map([
 	])],
 	['Line_Break', new Map([
 		['AI', 'Ambiguous'],
+		['AK', 'Aksara'],
 		['AL', 'Alphabetic'],
+		['AP', 'Aksara_Prebase'],
+		['AS', 'Aksara_Start'],
 		['B2', 'Break_Both'],
 		['BA', 'Break_After'],
 		['BB', 'Break_Before'],
@@ -1181,6 +1216,8 @@ module.exports = new Map([
 		['SG', 'Surrogate'],
 		['SP', 'Space'],
 		['SY', 'Break_Symbols'],
+		['VF', 'Virama_Final'],
+		['VI', 'Virama'],
 		['WJ', 'Word_Joiner'],
 		['XX', 'Unknown'],
 		['ZW', 'ZWSpace'],
