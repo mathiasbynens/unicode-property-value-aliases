@@ -1,41 +1,41 @@
 {
-  "name": "unicode-property-value-aliases",
-  "version": "3.8.0",
-  "description": "Unicode property value alias mappings in JavaScript format.",
-  "homepage": "https://github.com/mathiasbynens/unicode-property-value-aliases",
-  "main": "index.js",
-  "engines": {
-    "node": ">=4"
-  },
-  "files": [
-    "LICENSE-MIT.txt",
-    "index.js"
-  ],
-  "keywords": [
-    "unicode",
-    "unicode-data",
-    "alias",
-    "aliases",
-    "property alias"
-  ],
-  "license": "MIT",
-  "author": {
-    "name": "Mathias Bynens",
-    "url": "https://mathiasbynens.be/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mathiasbynens/unicode-property-value-aliases.git"
-  },
-  "bugs": "https://github.com/mathiasbynens/unicode-property-value-aliases/issues",
-  "devDependencies": {
-    "ava": "*",
-    "jsesc": "^3.0.2",
-    "unicode-property-aliases": "^1.6.2"
-  },
-  "scripts": {
-    "download": "curl --location https://unicode.org/Public/16.0.0/ucd/PropertyValueAliases.txt > data/PropertyValueAliases.txt",
-    "build": "node scripts/build.js",
-    "test": "ava tests/tests.js"
-  }
+	"name": "unicode-property-value-aliases",
+	"version": "3.8.0",
+	"description": "Unicode property value alias mappings in JavaScript format.",
+	"homepage": "https://github.com/mathiasbynens/unicode-property-value-aliases",
+	"main": "index.js",
+	"engines": {
+		"node": ">=4"
+	},
+	"files": [
+		"LICENSE-MIT.txt",
+		"index.js"
+	],
+	"keywords": [
+		"unicode",
+		"unicode-data",
+		"alias",
+		"aliases",
+		"property alias"
+	],
+	"license": "MIT",
+	"author": {
+		"name": "Mathias Bynens",
+		"url": "https://mathiasbynens.be/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mathiasbynens/unicode-property-value-aliases.git"
+	},
+	"bugs": "https://github.com/mathiasbynens/unicode-property-value-aliases/issues",
+	"devDependencies": {
+		"ava": "*",
+		"jsesc": "^3.0.2",
+		"unicode-property-aliases": "^2.1.0"
+	},
+	"scripts": {
+		"download": "curl --location https://unicode.org/Public/17.0.0/ucd/PropertyValueAliases.txt > data/PropertyValueAliases.txt",
+		"build": "node scripts/build.js",
+		"test": "ava tests/tests.js"
+	}
 }
